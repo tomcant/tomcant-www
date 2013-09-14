@@ -1,0 +1,60 @@
+form {
+  width: 500px;
+  margin: 20px auto 0;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  display: block;
+  float: left;
+  width: 150px;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 22px;
+}
+
+textarea {
+  padding: 3px;
+  width: 490px;
+  max-width: 490px;
+  height: 100px;
+  background-color: #fffff0;
+  border: 1px solid #b36037;
+  color: #503616;
+}
+
+input[type=text] {
+  padding: 3px 5px;
+  width: 250px;
+  background-color: #fffff0;
+  border: 1px solid #b36037;
+  color: #503616;
+}
+
+input[type=submit],
+input[type=reset]{
+  padding: 3px 5px;
+}
+
+fieldset.buttons {
+  text-align: right;
+}
+
+div.form-item {
+  margin: 10px 0;
+}
+
+div.form-item.textarea label {
+  width: auto;
+  float: none;
+  text-align: left;
+}
+
+.error-element {
+  border: 1px solid #f00;
+  background-color: #fff0f0;
+  padding: 3px !important;
+}

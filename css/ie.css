@@ -1,0 +1,13 @@
+p {
+  clear:both;
+}
+
+div#header {
+  margin:0;
+}
+
+div#content {
+  clear:both;
+  border:1px solid #B38937;
+  padding:10px;
+}
