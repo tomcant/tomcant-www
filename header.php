@@ -3,5 +3,5 @@
 </div>
 
 <div id="heading">
-  <h1>Hello. I'm an <strong><em>engineer</em></strong>.</h1>
+  <h1><em>Tom Cant</em></h1>
 </div>
