@@ -4,14 +4,9 @@ require 'includes/bootstrap.inc';
 
 $error = false;
 
-if (empty($_POST['youremail'])) {
+if (empty($_POST['email'])) {
   $error = true;
   set_message('You must specify your email address.', 'error');
-}
-
-if (empty($_POST['subject'])) {
-  $error = true;
-  set_message('You must specify a subject.', 'error');
 }
 
 if (empty($_POST['message'])) {
@@ -26,9 +21,10 @@ else {
   $redirect = '/';
 
   $to      = 'tomcant@gmail.com';
-  $subject = $_POST['subject'];
+  $subject = 'tomcant.co.uk - contact form submitted';
+
   $message = $_POST['message'];
-  $headers = 'From: ' . $_POST['youremail'];
+  $headers = 'From: ' . $_POST['email'];
 
   mail($to, $subject, $message, $headers);
 

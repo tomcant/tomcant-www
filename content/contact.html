@@ -1,25 +1,17 @@
-<p>Leave a message and I'll get back to you ASAP. Alternatively, you can email me directly on <a href="mailto:tomcant@gmail.com">tomcant@gmail.com</a>.</p>
-
 <form action="emailme.php" method="post">
-	<fieldset>
+  <fieldset>
     <div class="form-item textfield">
-      <label for="youremail">Your email address</label>
-      <input type="text" name="youremail" />
-    </div>
-
-    <div class="form-item textfield">
-      <label for="subject">Subject</label>
-      <input type="text" name="subject" />
+      <label for="email">Your email address</label>
+      <input type="text" name="email" />
     </div>
 
     <div class="form-item textarea">
       <label for="message">Your message</label>
       <textarea name="message"></textarea>
     </div>
-	</fieldset>
+  </fieldset>
 
-	<fieldset class="buttons">
-		<input type="reset" />
-  	<input type="submit" value="Send" />
+  <fieldset class="buttons">
+    <input type="submit" value="Send" />
   </fieldset>
 </form>

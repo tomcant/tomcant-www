@@ -1,6 +1,6 @@
 form {
   width: 500px;
-  margin: 20px auto 0;
+  margin: 0 auto;
 }
 
 fieldset {
@@ -8,34 +8,24 @@ fieldset {
 }
 
 label {
-  display: block;
-  float: left;
-  width: 150px;
-  text-align: right;
-  padding-right: 10px;
-  line-height: 22px;
+  line-height: 25px;
+}
+
+input[type=text],
+textarea {
+  width: 100%;
+  padding: 5px;
+  background-color: #fffff0;
+  border: 1px solid #b36037;
+  color: #503616;
 }
 
 textarea {
-  padding: 3px;
-  width: 490px;
-  max-width: 490px;
+  max-width: 100%;
   height: 100px;
-  background-color: #fffff0;
-  border: 1px solid #b36037;
-  color: #503616;
 }
 
-input[type=text] {
-  padding: 3px 5px;
-  width: 250px;
-  background-color: #fffff0;
-  border: 1px solid #b36037;
-  color: #503616;
-}
-
-input[type=submit],
-input[type=reset]{
+input[type=submit] {
   padding: 3px 5px;
 }
 
@@ -45,12 +35,6 @@ fieldset.buttons {
 
 div.form-item {
   margin: 10px 0;
-}
-
-div.form-item.textarea label {
-  width: auto;
-  float: none;
-  text-align: left;
 }
 
 .error-element {
