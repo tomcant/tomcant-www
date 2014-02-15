@@ -21,7 +21,7 @@ else {
   $redirect = '/';
 
   $to      = 'tomcant@gmail.com';
-  $subject = 'tomcant.co.uk - contact form submitted';
+  $subject = 'tomcant.name - contact form submitted';
 
   $message = $_POST['message'];
   $headers = 'From: ' . $_POST['email'];
