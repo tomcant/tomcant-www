@@ -1,0 +1,13 @@
+#topics .major {
+  float: left;
+  margin: 0 0 15px 40px;
+  list-style-position: inside;
+}
+
+#topics .major ul {
+  margin-left: 15px;
+}
+
+#topics .major ul li {
+  white-space: nowrap;
+}
