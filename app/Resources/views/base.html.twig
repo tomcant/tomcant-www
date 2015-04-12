@@ -2,12 +2,44 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <title>{% block title %}home{% endblock %} - tomcant</title>
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/app/css/main.css') }}" type="text/css" rel="stylesheet" />
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="wrapper">
+            <div id="header" class="clear-fix">
+                <div id="nav">
+                    <ul>
+                        <li>
+                            <a href="{{ path('homepage') }}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="heading">
+                    <h1><em>Tom Cant</em></h1>
+                </div>
+            </div>
+
+            <div id="content">
+                {% for flashMessage in app.session.flashbag.get('notice') %}
+                    <div class="notice">
+                        {{ flashMessage }}
+                    </div>
+                {% endfor %}
+
+                {% block body %}{% endblock %}
+            </div>
+
+            <div id="footer">
+                &copy; Tom Cant 2009 - {{ "now"|date("Y") }}
+            </div>
+        </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
