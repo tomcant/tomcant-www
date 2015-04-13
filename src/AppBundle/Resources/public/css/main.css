@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background: url(../img/bg.png) #fffff0;
+  background: url(../images/background.png) #fffff0;
   font-family: Verdana, sans-serif;
 }
 
@@ -16,11 +16,6 @@ h1 {
   font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;
   text-shadow: 1px 1px #F5E7E0;
   color: #B36037;
-}
-
-span.ampersand {
-  font-family: PlayfairDisplayRegular;
-  font-style: italic;
 }
 
 p {
@@ -91,13 +86,13 @@ a:active {
   box-shadow: 0 0 6px #B36037 inset;
 }
 
-#nav ul li.active {
+#nav ul li.is-active {
   -webkit-box-shadow: 0 -2px 4px #B36037;
   -moz-box-shadow: 0 -2px 4px #B36037;
   box-shadow: 0 -2px 4px #B36037;
 }
 
-#nav ul li.active a {
+#nav ul li.is-active a {
   position: relative;
   color: #B36037;
   font-weight: bold;
@@ -163,8 +158,7 @@ a:active {
   text-shadow: none !important;
 }
 
-/* Handy clear-fix */
-.clear-fix:after {
+.clearfix:after {
   content: '.';
   clear: both;
   display: block;
@@ -172,14 +166,67 @@ a:active {
   height: 0;
 }
 
-@font-face {
-  font-family: 'PlayfairDisplayRegular';
-  font-weight: normal;
-  font-style: normal;
+/**
+ * Home ========================================================================
+ */
+#topics .major {
+  float: left;
+  margin: 0 0 15px 40px;
+  list-style-position: inside;
+}
 
-  src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular-webfont.eot');
-  src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular-webfont.woff') format('woff'),
-       url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular-webfont.ttf') format('truetype'),
-       url('../fonts/PlayfairDisplay/PlayfairDisplay-Regular-webfont.svg#PlayfairDisplayRegular') format('svg');
+#topics .major ul {
+  margin-left: 15px;
+}
+
+#topics .major ul li {
+  white-space: nowrap;
+}
+
+/**
+ * Contact =====================================================================
+ */
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  line-height: 25px;
+}
+
+input[type=text],
+textarea {
+  width: 100%;
+  padding: 5px;
+  background-color: #fffff0;
+  border: 1px solid #b36037;
+  color: #503616;
+}
+
+textarea {
+  max-width: 100%;
+  height: 100px;
+}
+
+input[type=submit] {
+  padding: 3px 5px;
+}
+
+fieldset.buttons {
+  text-align: right;
+}
+
+div.form-item {
+  margin: 10px 0;
+}
+
+.error-element {
+  border: 1px solid #f00;
+  background-color: #fff0f0;
+  padding: 3px !important;
 }
