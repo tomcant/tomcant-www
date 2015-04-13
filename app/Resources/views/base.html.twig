@@ -27,11 +27,19 @@
             </header>
 
             <div id="content">
-                {% for flashMessage in app.session.flashbag.get('notice') %}
-                    <div class="notice">
-                        {{ flashMessage }}
+                {% set messages = app.session.flashbag.all %}
+
+                {% if messages is not empty %}
+                    <div class="messages">
+                        {% for label, flashes in messages %}
+                            <ul class="{{ label }}">
+                                {% for flash in flashes %}
+                                    <li>{{ flash }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endfor %}
                     </div>
-                {% endfor %}
+                {% endif %}
 
                 {% block body %}{% endblock %}
             </div>
