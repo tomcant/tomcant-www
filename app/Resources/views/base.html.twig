@@ -13,10 +13,10 @@
                 <nav id="nav">
                     <ul>
                         <li class="{% if app.request.attributes.get('_route') == 'home' %}is-active{% endif %}">
-                            <a href="{{ path('home') }}">Home</a>
+                            <a href="{{ path('home') }}">home</a>
                         </li>
                         <li class="{% if app.request.attributes.get('_route') == 'contact' %}is-active{% endif %}">
-                            <a href="{{ path('contact') }}">Contact</a>
+                            <a href="{{ path('contact') }}">contact</a>
                         </li>
                     </ul>
                 </nav>
