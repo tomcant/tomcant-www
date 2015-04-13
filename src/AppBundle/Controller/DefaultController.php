@@ -37,6 +37,20 @@ class DefaultController extends Controller
             $em->persist($enquiry);
             $em->flush();
 
+            // Send an email notification.
+            $mailer = $this->get('mailer');
+
+            $message = $mailer->createMessage()
+                ->setSubject('Contact enquiry from tomcant.name')
+                ->setFrom('enquiries@tomcant.name')
+                ->setTo('tomcant@gmail.com')
+                ->setBody($this->renderView('AppBundle:Default:enquiryEmail.txt.twig', array(
+                    'enquiry' => $enquiry,
+                )))
+            ;
+
+            $mailer->send($message);
+
             $this->addFlash(
                 'notice',
                 'Thank you for your message. I will get back to you as soon as possible.'
