@@ -9,22 +9,22 @@
     </head>
     <body>
         <div id="wrapper">
-            <div id="header" class="clear-fix">
-                <div id="nav">
+            <header id="header" class="clear-fix">
+                <nav id="nav">
                     <ul>
                         <li>
-                            <a href="{{ path('homepage') }}">Home</a>
+                            <a href="{{ path('home') }}">Home</a>
                         </li>
                         <li>
                             <a href="{{ path('contact') }}">Contact</a>
                         </li>
                     </ul>
-                </div>
+                </nav>
 
                 <div id="heading">
                     <h1><em>Tom Cant</em></h1>
                 </div>
-            </div>
+            </header>
 
             <div id="content">
                 {% for flashMessage in app.session.flashbag.get('notice') %}
@@ -36,9 +36,9 @@
                 {% block body %}{% endblock %}
             </div>
 
-            <div id="footer">
+            <footer id="footer">
                 &copy; Tom Cant 2009 - {{ "now"|date("Y") }}
-            </div>
+            </footer>
         </div>
         {% block javascripts %}{% endblock %}
     </body>
