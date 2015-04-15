@@ -169,6 +169,7 @@ class Enquiry
     {
         $metadata
             ->addPropertyConstraint('name', new NotBlank())
+            ->addPropertyConstraint('email', new NotBlank())
             ->addPropertyConstraint('email', new Email())
             ->addPropertyConstraint('message', new NotBlank())
         ;
