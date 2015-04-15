@@ -186,6 +186,14 @@ a:active {
 /**
  * Contact =====================================================================
  */
+#appbundle_enquiry > div {
+  margin-bottom: 10px;
+}
+
+#appbundle_enquiry > div:last-of-type {
+  margin-bottom: 0;
+}
+
 label {
   line-height: 25px;
 }
