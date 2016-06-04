@@ -1,0 +1,18 @@
+DEPENDENCIES
+  fb_apt
+    git: git://github.com/facebook/chef-cookbooks.git
+    revision: bb07ec9b6af36a423c97a2964a6cd9cc7ca341ad
+    rel: cookbooks/fb_apt
+  fb_helpers
+    git: git://github.com/facebook/chef-cookbooks.git
+    revision: bb07ec9b6af36a423c97a2964a6cd9cc7ca341ad
+    rel: cookbooks/fb_helpers
+  tomcant
+    path: cookbooks/tomcant
+
+GRAPH
+  fb_apt (0.1.0)
+    fb_helpers (>= 0.0.0)
+  fb_helpers (0.1.0)
+  tomcant (0.0.1)
+    fb_apt (>= 0.0.0)

@@ -1,0 +1,5 @@
+source 'https://supermarket.getchef.com'
+
+cookbook 'tomcant', path: './cookbooks/tomcant'
+cookbook 'fb_apt', github: 'facebook/chef-cookbooks', rel: 'cookbooks/fb_apt'
+cookbook 'fb_helpers', github: 'facebook/chef-cookbooks', rel: 'cookbooks/fb_helpers'
