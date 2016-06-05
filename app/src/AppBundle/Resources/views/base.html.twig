@@ -10,18 +10,8 @@
     </head>
     <body>
         <div id="wrapper">
-            <header id="header" class="clearfix">
-                <nav id="nav">
-                    <ul>
-                        <li class="{% if app.request.attributes.get('_route') == 'app_index' %}is-active{% endif %}">
-                            <a href="{{ path('app_index') }}">home</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <div id="heading">
-                    <h1><em>Tom Cant</em></h1>
-                </div>
+            <header id="header">
+                <h1>Tom Cant</h1>
             </header>
 
             <div id="content">
