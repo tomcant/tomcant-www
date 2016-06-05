@@ -3,6 +3,7 @@ lock '3.4.0'
 
 set :repo_url, 'https://bitbucket.org/tomcant/tomcant.git'
 set :repo_tree, 'app'
+set :branch, '3.x'
 set :deploy_to, '/srv/app/tomcant'
 set :permission_method, :acl
 set :file_permissions_users, ['www-data']
