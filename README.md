@@ -2,8 +2,9 @@
 
 ## Infrastructure
 
-Provision a server with Chef/Knife:
+Provision a server with Chef and Knife Zero:
 ```
+chef gem install knife-zero
 cd /path/to/repo/chef && knife zero bootstrap HOST -E prod -r 'tomcant'
 ```
 
