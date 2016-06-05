@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>{% block title %}{% endblock %} - tomcant</title>
+        {% block stylesheets %}
+            <link href="{{ asset('bundles/app/css/main.css') }}" type="text/css" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+        <div id="wrapper">
+            <header id="header" class="clearfix">
+                <nav id="nav">
+                    <ul>
+                        <li class="{% if app.request.attributes.get('_route') == 'app_index' %}is-active{% endif %}">
+                            <a href="{{ path('app_index') }}">home</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div id="heading">
+                    <h1><em>Tom Cant</em></h1>
+                </div>
+            </header>
+
+            <div id="content">
+                {% block body %}{% endblock %}
+            </div>
+
+            <footer id="footer">
+                &copy; Tom Cant 2009 - {{ "now"|date("Y") }}
+            </footer>
+        </div>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
