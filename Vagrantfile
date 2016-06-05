@@ -22,6 +22,8 @@ Vagrant.configure(2) do |config|
   config.berkshelf.berksfile_path = 'chef/Berksfile'
 
   config.vm.provision 'chef_zero' do |chef|
+    chef.environment = 'dev'
+    chef.environments_path = 'chef/environments'
     chef.cookbooks_path = 'chef/cookbooks'
     chef.nodes_path = '/tmp/nodes'
     chef.run_list = ['tomcant']

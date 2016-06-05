@@ -1,4 +1,4 @@
-%w{htop curl git vim}.each do |package|
+%w{htop git vim}.each do |package|
   package package do
     action :install
   end
