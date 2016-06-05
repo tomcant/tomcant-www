@@ -1,15 +1,15 @@
-# Tom Cant personal website
+# Personal website
 
 ## Infrastructure
 
 Provision a server with Chef/Knife:
 ```
-knife zero bootstrap HOST -E prod -r 'tomcant'
+cd /path/to/repo/chef && knife zero bootstrap HOST -E prod -r 'tomcant'
 ```
 
 # Deployment
 
 Deploy the application with Capistrano:
 ```
-bundle exec cap production deploy
+cd /path/to/repo/deploy && bundle exec cap production deploy
 ```
