@@ -9,3 +9,4 @@ end
 
 include_recipe 'tomcant::nginx'
 include_recipe 'tomcant::php'
+include_recipe 'tomcant::app'
