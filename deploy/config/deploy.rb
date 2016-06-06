@@ -1,6 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.4.0'
 
+set :application, 'tomcant'
 set :repo_url, 'https://bitbucket.org/tomcant/tomcant.git'
 set :repo_tree, 'app'
 set :branch, '3.x'
