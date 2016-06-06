@@ -1,16 +1,24 @@
 server {
   listen 80 default;
-  listen [::]:80;
   server_name _;
   root /srv/app/tomcant/current/web;
+
   location / {
     try_files $uri /app.php$is_args$args;
   }
+
   location ~ ^/app.php(/|$) {
     fastcgi_pass unix:/run/php/php7.0-fpm.sock;
     fastcgi_split_path_info ^(.+\.php)(/.*)$;
     include fastcgi_params;
     fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;
     fastcgi_param DOCUMENT_ROOT $realpath_root;
+    internal;
   }
+}
+
+server {
+  listen 80;
+  server_name www.tomcant.name;
+  rewrite ^/(.*) http://tomcant.name/$1 permanent;
 }
