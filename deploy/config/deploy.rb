@@ -5,7 +5,7 @@ set :application, 'tomcant'
 set :repo_url, 'https://bitbucket.org/tomcant/tomcant.git'
 set :repo_tree, 'app'
 set :branch, '3.x'
-set :deploy_to, '/srv/app/tomcant'
+set :deploy_to, '/srv/app'
 set :permission_method, :acl
 set :file_permissions_users, ['www-data']
 set :file_permissions_paths, [fetch(:var_path), fetch(:log_path)]

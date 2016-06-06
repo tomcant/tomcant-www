@@ -1,7 +1,7 @@
 server {
   listen 80 default;
   server_name _;
-  root /srv/app/tomcant/current/web;
+  root /srv/app/current/web;
 
   location / {
     try_files $uri /app.php$is_args$args;
