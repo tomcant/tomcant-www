@@ -1,12 +1,3 @@
-# Create application directory.
-directory '/srv/app' do
-  owner 'deploy'
-  group 'deploy'
-  mode '0755'
-  action :create
-  not_if { ::Dir.exist?('/srv/app') }
-end
-
 # Create deployment user.
 user 'deploy' do
   home '/home/deploy'
@@ -26,4 +17,13 @@ cookbook_file '/home/deploy/.ssh/authorized_keys' do
   owner 'deploy'
   group 'deploy'
   mode '0600'
+end
+
+# Create application directory.
+directory '/srv/app' do
+  owner 'deploy'
+  group 'deploy'
+  mode '0755'
+  action :create
+  not_if { ::Dir.exist?('/srv/app') }
 end
