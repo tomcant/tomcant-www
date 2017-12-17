@@ -1,4 +1,4 @@
-%w{cli intl curl fpm}.each do |package|
+%w{cli intl curl fpm xml}.each do |package|
   package "php7.0-#{package}" do
     action :install
   end
