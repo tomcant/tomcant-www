@@ -1,5 +1,7 @@
 # Install nginx.
-package 'nginx'
+package 'nginx' do
+  version '1.11.8-1~jessie'
+end
 
 # Define nginx service.
 service 'nginx' do
