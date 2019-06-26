@@ -3,10 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <title>{% block title %}{% endblock %} - tomcant</title>
-        {% block stylesheets %}
-            <link href="{{ asset('bundles/app/css/main.css') }}" type="text/css" rel="stylesheet">
-        {% endblock %}
+        <title>tomcant</title>
+        <link href="assets/css/main.css" type="text/css" rel="stylesheet">
     </head>
     <body>
         <div id="wrapper">
@@ -15,13 +13,12 @@
             </header>
 
             <div id="content">
-                {% block body %}{% endblock %}
+                <p>One day I will make time to put something useful here. Until then, my C.V. can be viewed in the following formats: <a href="cv/cv.doc">.doc</a> <a href="cv/cv.pdf" target="new">.pdf</a></p>
             </div>
 
             <footer id="footer">
-                &copy; Tom Cant 2009 - {{ "now"|date("Y") }}
+                &copy; Tom Cant 2009 - 2019
             </footer>
         </div>
-        {% block javascripts %}{% endblock %}
     </body>
 </html>
